@@ -33,7 +33,7 @@ Things you may want to cover:
 |username|string|null: false|
 
 ### Association
-has_many :tweets
+has_many :messages
 has_many :groups, through: groups_users
 has_many :groups_users
 
@@ -41,9 +41,10 @@ has_many :groups_users
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
-|image]|text]
+|body|text|
+|image]|text|
 |user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -53,8 +54,7 @@ has_many :groups_users
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|text|null: false|
-[group_member][text]
+|name|string|null: false|
 
 ### Association
 - has_many :groups_users
