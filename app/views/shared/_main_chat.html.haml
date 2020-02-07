@@ -1,0 +1,33 @@
+.chat-main
+  .main-header
+    .main-header-top
+      .main-header-top__group
+        group name
+      .main-header-top__member
+        Member :
+    .main-header-edit
+      = link_to "#", class: "main-header-edit__btn"  do
+        Edit
+  .main-center
+    .main-center-content
+      .main-center-content__name
+        nakamura
+      .main-center-content__day
+        2020/01/01
+    .main-center-message
+      おはよう
+    .main-center-content
+      .main-center-content__name
+        yabe
+      .main-center-content__day
+        2020/01/02
+    .main-center-message
+      こんにちは
+  .main-bottom
+    %form.bottom-form
+      .bottom-form-box
+        %input{type: "text", class: "bottom-form-box__text" , placeholder: "type a message"}
+        %label{class: "bottom-form-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "bottom-form-box__image__file"}
+      %input{type: "submit", class: "bottom-form-send", value: "Send"}
