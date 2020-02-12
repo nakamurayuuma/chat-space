@@ -2,32 +2,24 @@
   .main-header
     .main-header-top
       .main-header-top__group
-        group name
-      .main-header-top__member
+        = @group.name
+      .main-header-top__member 
         Member :
+        - @group.users.each do |user| 
+          = user.name
     .main-header-edit
-      = link_to "#", class: "main-header-edit__btn"  do
+      = link_to edit_group_path(@group.id), class: "main-header-edit__btn"  do
         Edit
+
   .main-center
-    .main-center-content
-      .main-center-content__name
-        nakamura
-      .main-center-content__day
-        2020/01/01
-    .main-center-message
-      おはよう
-    .main-center-content
-      .main-center-content__name
-        yabe
-      .main-center-content__day
-        2020/01/02
-    .main-center-message
-      こんにちは
+    = render @messages
+
   .main-bottom
-    %form.bottom-form
-      .bottom-form-box
-        %input{type: "text", class: "bottom-form-box__text" , placeholder: "type a message"}
-        %label{class: "bottom-form-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "bottom-form-box__image__file"}
-      %input{type: "submit", class: "bottom-form-send", value: "Send"}
+    .bottom-btn
+      = form_for [@group, @message] do |f|
+        .bottom-form-box
+          = f.text_field :content, class: 'bottom-form-box__text', placeholder: 'type a message'
+          = f.label :image, class: 'bottom-form-box__image' do
+            = icon('fas', 'image', class: 'bottom-form-box__icon')
+            = f.file_field :image, class: 'bottom-form-box__file'
+        = f.submit 'Send', class: 'bottom-form-send'
