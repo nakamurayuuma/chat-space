@@ -2,9 +2,6 @@
   box-sizing: border-box;
 }
 
-a{
-	text-decoration: none;
-}
 
 .wrapper{
   display: flex;
@@ -56,16 +53,21 @@ a{
 }
 
 .groups-content{
-  &__group{
-    margin-bottom: 5px;
-    font-size: 15px;
-    color: #ffffff;
+  
+  .a{
+    text-decoration: none;
   }
-  &__message{
-    font-size: 11px;
-    color: #ffffff;
-    margin-bottom: 40px;
-  }
+  
+    &__group{
+      margin-bottom: 5px;
+      font-size: 15px;
+      color: #ffffff;
+    }
+    &__message{
+      font-size: 11px;
+      color: #ffffff;
+      margin-bottom: 40px;
+    }
 }
   
 

@@ -3,7 +3,7 @@
     .sidebar-header
       .sidebar-header__user
         = current_user.name
-      %ul.sidebar-header__icons
+      %ul.sidebar-header__icons 
       %li.sidebar-header__list
       = link_to new_group_path ,class: "sidebar-header__btn" do
         = icon('fas', 'pen-square', class: 'icon')
