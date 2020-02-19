@@ -13,7 +13,7 @@
   .groups
     - current_user.groups.each do |group|
       .groups-content
-        = link_to group_messages_path(group) do
+        = link_to group_messages_path(group) ,class: "text-decoration" do
           .groups-content__group
             = group.name
           .groups-content__message
