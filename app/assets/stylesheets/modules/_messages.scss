@@ -1,5 +1,6 @@
 *{
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 
@@ -53,20 +54,16 @@
 }
 
 .groups-content{
-  
-  a{
-    text-decoration: none;
 
-    &__group{
-      margin-bottom: 5px;
-      font-size: 15px;
-      color: #ffffff;
-    }
-    &__message{
-      font-size: 11px;
-      color: #ffffff;
-      margin-bottom: 40px;
-    }
+  &__group{
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #ffffff;
+  }
+  &__message{
+    font-size: 11px;
+    color: #ffffff;
+    margin-bottom: 40px;
   }
 }
   
